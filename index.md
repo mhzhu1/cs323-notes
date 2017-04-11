@@ -7,7 +7,7 @@ These notes are based on Stanford
 [CS323](http://cs.stanford.edu/~ermon/cs323/index.html), taught by [Stefano
 Ermon](http://cs.stanford.edu/~ermon/), and have been written by Michael Zhu.
 The notes are still under construction! If you find any typos or can contribute
-to make the notes better, please let us know, or submit a pull request with your
+to help make the notes better, please let us know, or submit a pull request with your
 fixes to our [Github repository](https://github.com/ermongroup/cs323-notes).
 
 This course is a graduate level introduction to automated reasoning techniques
