@@ -51,5 +51,13 @@ Hi
 
 $$ 3x^2 $$
 
+Bye
+
+
+Hi
+
+\begin{equation}
+3x^2
+\end{equation}
 
 Bye
