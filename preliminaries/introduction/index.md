@@ -1,5 +1,5 @@
 ---
 layout: post
-title: Propositional Logic
+title: Introduction
 ---
-We begin our study with propositional logic.
+Probabilistic graphical modeling is a branch of machine learning that studies how to use probability distributions to describe the world and to make useful predictions about it.
