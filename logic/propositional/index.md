@@ -188,11 +188,11 @@ and pure literals. With these heuristics, DPLL is a very effective
 backtracking SAT solver.
 
 The recursive algorithm for DPLL is as follows. $$DPLL(\phi,\alpha)$$
-If $$\phi|\alpha$$ is empty, return satisfiable.
-If $$\phi|\alpha$$ contains an empty clause, return unsatisfiable.
-If $$\phi|\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$.
-If $$\phi|\alpha$$ has a pure literal $$p$$, return $$DPLL(\phi,\alpha p)$$.
-Let $$p$$ be a literal from a minimum size clause of $$\phi|\alpha$$. If $$DPLL(\phi,\alpha p)$$ returns satisfiable, return satisfiable. Else, return $$DPLL(\phi,\alpha\neg p)$$.
+- If $$\phi|\alpha$$ is empty, return satisfiable.
+- If $$\phi|\alpha$$ contains an empty clause, return unsatisfiable.
+- If $$\phi|\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$.
+- If $$\phi|\alpha$$ has a pure literal $$p$$, return $$DPLL(\phi,\alpha p)$$.
+- Let $$p$$ be a literal from a minimum size clause of $$\phi|\alpha$$. If $$DPLL(\phi,\alpha p)$$ returns satisfiable, return satisfiable. Else, return $$DPLL(\phi,\alpha\neg p)$$.
 
 
 ### Clause Learning
