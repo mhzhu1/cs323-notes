@@ -189,6 +189,8 @@ backtracking SAT solver.
 
 The recursive algorithm for DPLL is as follows. $$DPLL(\phi,\alpha)$$
 
+If $$\Delta|P=\{\alpha\backslash\{\neg P\}\mid\alpha\in\Delta,P\notin\alpha\}$$ is empty
+Testing
 If $$\phi|\alpha$$ is empty, return satisfiable
 If $$\phi|\alpha$$ contains an empty clause, return unsatisfiable
 If $$\phi|\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$
