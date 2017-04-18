@@ -21,7 +21,6 @@ We denote our propositional variables by $$p_{1},...,p_{n}$$ where
 each $$p_{i}$$ is a binary variable that can be true or false.
 
 Sentences are defined recursively as follows: 
-
 - A propositional variable is a sentence (this is known as an atomic sentence)
 - If $$\alpha$$ and $$\beta$$ are sentences, then $$\neg\alpha$$, $$\alpha\lor\beta$$, and $$\alpha\land\beta$$ are valid sentences
 
@@ -34,7 +33,6 @@ $$2^{n}$$ possible worlds if we have $$n$$ propositional variables.
 
 We determine if a sentence $$\alpha$$ is true in a world $$\omega$$
 using the following recursive rules:
-
 - $$\omega\models p_{i}$$ if and only if $$\omega(p_{i})$$ is true
 - $$\omega\models\neg\alpha$$ if and only if $$\omega\not\models\alpha$$
 - $$\omega\models\alpha\lor\beta$$ if and only if ($$\omega\models\alpha$$)
@@ -56,14 +54,11 @@ decrease (if we gain new information), or go to zero (if the new sentence
 is inconsistent with the existing knowledge base).
 
 We will make use of the following definitions:
-
-A sentence is satisfiable (consistent) if there exists at least one
+- A sentence is satisfiable (consistent) if there exists at least one
 world that makes the sentence true, i.e. $$Models(\alpha)\ne\phi$$.
-
-A sentence is valid if the sentence is true in every possible world,
+- A sentence is valid if the sentence is true in every possible world,
 i.e. $$Models(\alpha)=\Omega=\{0,1\}^{n}$$.
-
-Two sentences are equivalent if they are true in the same models,
+- Two sentences are equivalent if they are true in the same models,
 e.g. $$\alpha\lor\beta$$ and $$\beta\lor\alpha$$.
 
 
@@ -80,7 +75,6 @@ cases that could result are always true, depends, and always false.
 
 Inference problem: Does $$\alpha\Rightarrow\beta$$? We can solve this
 by checking if $$\alpha\land\neg\beta$$ is satisfiable.
-
 1. If not satisfiable, then we know that $$\alpha\Rightarrow\beta$$. This
    is similar to the idea behind proof by contradiction.
 2. If satisfiable, then there are two possible cases. Check if $$\alpha\land\beta$$
@@ -108,7 +102,6 @@ clausal norm form or CNF) if a sentence is a conjunction of disjunctions.
 
 Given any formula, we can always convert it into CNF using the following
 procedure:
-
 1. The first step is to remove syntactic sugar, e.g. change $$\alpha\Rightarrow\beta$$
    into $$\neg\alpha\lor\beta$$. After this step, we should only have
    negations, conjunctions, and disjunctions.
@@ -188,11 +181,18 @@ and pure literals. With these heuristics, DPLL is a very effective
 backtracking SAT solver.
 
 The recursive algorithm for DPLL is as follows. $$DPLL(\phi,\alpha)$$
-- If $$\phi|\alpha$$ is empty, return satisfiable.
-- If $$\phi|\alpha$$ contains an empty clause, return unsatisfiable.
-- If $$\phi|\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$.
-- If $$\phi|\alpha$$ has a pure literal $$p$$, return $$DPLL(\phi,\alpha p)$$.
-- Let $$p$$ be a literal from a minimum size clause of $$\phi|\alpha$$. If $$DPLL(\phi,\alpha p)$$ returns satisfiable, return satisfiable. Else, return $$DPLL(\phi,\alpha\neg p)$$.
+
+If $$\phi|\alpha$$ is empty, return satisfiable.
+
+If $$\phi|\alpha$$ contains an empty clause, return unsatisfiable.
+
+If $$\phi|\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$.
+
+If $$\phi|\alpha$$ has a pure literal $$p$$, return $$DPLL(\phi,\alpha p)$$.
+
+Let $$p$$ be a literal from a minimum size clause of $$\phi|\alpha$$.
+If $$DPLL(\phi,\alpha p)$$ returns satisfiable, return satisfiable.
+Else, return $$DPLL(\phi,\alpha\neg p)$$.
 
 
 ### Clause Learning
