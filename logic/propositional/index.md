@@ -188,7 +188,6 @@ and pure literals. With these heuristics, DPLL is a very effective
 backtracking SAT solver.
 
 The recursive algorithm for DPLL is as follows. $$DPLL(\phi,\alpha)$$
-
 If $$\phi|\alpha$$ is empty, return satisfiable.
 If $$\phi|\alpha$$ contains an empty clause, return unsatisfiable.
 If $$\phi|\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$.
