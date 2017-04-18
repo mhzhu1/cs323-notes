@@ -178,9 +178,9 @@ that variable.
 
 The DPLL algorithm combines DFS with early stopping, unit propagation
 and pure literals. With these heuristics, DPLL is a very effective
-backtracking SAT solver.
+backtracking SAT solver. The recursive algorithm for DPLL is as follows.
 
-The recursive algorithm for DPLL is as follows. $$DPLL(\phi,\alpha)$$
+$$DPLL(\phi,\alpha)$$:
 1. If $$\phi\vert\alpha$$ is empty, return satisfiable.
 2. If $$\phi\vert\alpha$$ contains an empty clause, return unsatisfiable.
 3. If $$\phi\vert\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$.
