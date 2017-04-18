@@ -183,7 +183,7 @@ backtracking SAT solver. The recursive algorithm for DPLL is as follows.
 $$DPLL(\phi,\alpha)$$:
 1. If $$\phi\vert\alpha$$ is empty, return satisfiable.
 2. If $$\phi\vert\alpha$$ contains an empty clause, return unsatisfiable.
-3. If $$\phi\vert\alpha$$ contains a unit clause $$p$$, return $$DPLL(\phi,\alpha p)$$.
+3. If $$\phi\vert\alpha$$ contains a unit clause $$\{p\}$$, return $$DPLL(\phi,\alpha p)$$.
 4. If $$\phi\vert\alpha$$ has a pure literal $$p$$, return $$DPLL(\phi,\alpha p)$$.
 5. Let $$p$$ be a literal from a minimum size clause of $$\phi\vert\alpha$$.
 If $$DPLL(\phi,\alpha p)$$ returns satisfiable, return satisfiable.
