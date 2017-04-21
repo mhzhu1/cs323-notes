@@ -160,10 +160,20 @@ We'll first consider the following algorithm for solving 2-CNF formulas
 (a CNF formula where every clause has at most 2 variables) and then
 generalize later.
 
+1. Repeat $$b$$ times:
+   1. Pick an arbitrary truth assignment $$x$$
+   1. Repeat $$2n^{2}$$ times:
+
+
+1. Repeat $$b$$ times:
+    1. Pick an arbitrary truth assignment $$x$$
+    1. Repeat $$2n^{2}$$ times:
+
+
 Input: a 2-CNF formula with $$n$$ variables
 1. Repeat $$b$$ times:
-      1. Pick an arbitrary truth assignment $$x$$
-      1. Repeat $$2n^{2}$$ times:
+   1. Pick an arbitrary truth assignment $$x$$
+   1. Repeat $$2n^{2}$$ times:
             1. If $$x$$ satisfies all clauses, return satisfiable
             1. Otherwise, pick any clause that is not satisfied and choose one of
 the variables uniformly at random from this clause and flip the truth
