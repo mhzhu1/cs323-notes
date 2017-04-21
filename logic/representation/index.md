@@ -2,7 +2,7 @@
 layout: post
 title: Propositional Logic
 ---
-### Engineering considerations (from slides)
+## Engineering considerations (from slides)
 
 4 key features of SAT solvers:
 
@@ -60,7 +60,7 @@ must either be a unit clause or an empty clause. We cannot derive
 a unit clause since we've run unit propagation until a fixed point,
 so there must exist an empty clause.
 
-### 2-SAT
+## 2-SAT
 
 A formula is in k-CNF if it is in CNF and each clause has at most
 k literals. The following algorithm can be used to determine the satisfiability
@@ -101,9 +101,9 @@ This implies that $$\Gamma$$ is unsatisfiable, so $$KB$$ is unsatisfiable.
 
 # Inference - randomized algorithms
 
-## Random walk algorithm for 2-SAT
+# Random walk algorithm for 2-SAT
 
-### Introduction
+## Introduction
 
 So far, we've introduced propositional logic and considered the problem
 of deciding whether a propositional formula is satisfiable. The algorithms
@@ -129,7 +129,7 @@ which does a random walk over the possible states to decide whether
 a formula is satisfiable. This type of search is known as a stochastic
 local search procedure.
 
-### Review of Markov chains
+## Review of Markov chains
 
 A Markov chain is a discrete stochastic process $$(X_{n},n\geq0)$$
 where each $$X_{n}\in S$$ ($$S$$ is the state space). A Markov chain
@@ -151,7 +151,7 @@ of the Markov chain. We have directed edges between nodes with edges
 weights representing the probability of transitioning between the
 corresponding states.
 
-### Random walk algorithm for 2-SAT
+## Random walk algorithm for 2-SAT
 
 Let the state space $$S=\{0,1\}^{n}$$ be the set of vertices of the
 Boolean hypercube. Since the number of possible states is $$2^{n}$$,
@@ -175,7 +175,7 @@ assignment of that variable
 1. Return unsatisfiable
 
 
-### Analysis of algorithm for 2-SAT
+## Analysis of algorithm for 2-SAT
 
 If the propositional formula is unsatisfiable, then the algorithm
 will always return unsatisfiable. If the formula is satisfiable, then
@@ -253,7 +253,7 @@ this random walk algorithm can be lowered to at most $$(\frac{1}{2})^{b}$$.
 Thus, we see that this random walk algorithm provably solves 2-SAT
 in polynomial time.
 
-## Random walk algorithm for 3-SAT
+# Random walk algorithm for 3-SAT
 
 Last lecture, we described and analyzed a random walk algorithm for
 deciding whether or not a 2-CNF formula is satisfiable. Now consider
@@ -272,7 +272,7 @@ the variables uniformly at random from this clause and flip the truth
 assignment of that variable
 1. Return unsatisfiable
 
-### Analysis of algorithm for 3-SAT
+## Analysis of algorithm for 3-SAT
 
 Using a similar analysis as in the last lecture, the bounds for the
 transition probabilities become
@@ -369,23 +369,22 @@ conclusion, we've seen that we can go from a biased random walk with
 $$h_{j}=O(2^{n})$$ to an expected run time of $$O((\frac{4}{3})^{n})$$
 by using very aggressive random restarts.
 
-## Other variants
+# Other variants
 
-### WalkSAT
+## WalkSAT
 
 WalkSAT is similar to the random walk algorithm described above. The
 difference is that when trying to fix a violated clause, WalkSAT will
 be greedy with some probability.
 
 After selecting a clause $$c$$,
-
 1. With probability $$p$$, pick a variable in $$c$$ at random and flip
 the truth assignment of $$c$$
 1. Otherwise, go through all the variables in $$c$$ and choose the variable
 with the smallest break count to flip (number of satisfied clauses
 that become unsatisfied when the variable is flipped).
 
-### GSAT
+## GSAT
 
 1. With probability $$p$$, choose a variable at random and flip the truth
 assignment
@@ -393,7 +392,7 @@ assignment
 with largest $$\Delta=$$ make count - break count
 
 
-### Simulated annealing
+## Simulated annealing
 
 1. Randomly pick a variable, calculate $$\Delta E=$$ make count - break
 count
@@ -402,4 +401,4 @@ transition
 1. Otherwise, accept the transition with probability $$p=\exp(\frac{-\Delta E}{T})$$
 where T is the temperature parameter
 
-Note that we need some randomness so the algorithm doesn't get trapped in local minima
+Note that the randomness helps the algorithm not get trapped in local minima.
