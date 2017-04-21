@@ -62,14 +62,14 @@ A formula is in k-CNF if it is in CNF and each clause has at most
 k literals. The following algorithm can be used to determine the satisfiability
 of a 2-CNF formula in polynomial time.
 
-1. $$\Gamma\leftarrow KB$$
+1. \$$\Gamma\leftarrow KB$$
 1. while $$\Gamma$$ is not empty do:
-    1. $$L\leftarrow\text{pick a literal from }\Gamma$$
-    1. $$\Delta\leftarrow\text{UP}(\Gamma,L)$$
+    1. \$$L\leftarrow\text{pick a literal from }\Gamma$$
+    1. \$$\Delta\leftarrow\text{UP}(\Gamma,L)$$
     1. if $$\{\}\in\Delta$$ then
-        1. $$\Delta\leftarrow\text{UP}(\Gamma,\neg L)$$
+        1. \$$\Delta\leftarrow\text{UP}(\Gamma,\neg L)$$
         1. if $$\{\}\in\Delta$$ then return unsatisfiable
-    1. $$\Gamma\leftarrow\Delta$$
+    1. \$$\Gamma\leftarrow\Delta$$
 1. Return satisfiable
 
 Lemma: If $$\Gamma$$ is a 2-CNF formula in which the literal $$L$$ occurs,
@@ -162,10 +162,10 @@ generalize later.
 
 Input: a 2-CNF formula with $$n$$ variables
 1. Repeat $$b$$ times:
-    1. Pick an arbitrary truth assignment $$x$$
-    1. Repeat $$2n^{2}$$ times:
-        1. If $$x$$ satisfies all clauses, return satisfiable
-        1. Otherwise, pick any clause that is not satisfied and choose one of
+      1. Pick an arbitrary truth assignment $$x$$
+      1. Repeat $$2n^{2}$$ times:
+            1. If $$x$$ satisfies all clauses, return satisfiable
+            1. Otherwise, pick any clause that is not satisfied and choose one of
 the variables uniformly at random from this clause and flip the truth
 assignment of that variable
 1. Return unsatisfiable
