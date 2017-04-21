@@ -183,10 +183,10 @@ variables.
 clauses obtained by running unit propagation on $$S$$. Then $$S'$$ is
 satisfiable if and only if the empty clause does not belong to $$S'$$.
 
-*Proof* ($$\Rightarrow$$): If the empty clause belongs to $$S'$$, then
+***Proof*** ($$\Rightarrow$$): If the empty clause belongs to $$S'$$, then
 $$S'$$ cannot be satisfiable because unit propagation is sound.
 
-*Proof* ($$\Leftarrow$$): If $$S$$ is horn, then $$S'$$ is also horn. Assume
+***Proof*** ($$\Leftarrow$$): If $$S$$ is horn, then $$S'$$ is also horn. Assume
 $$S'$$ is unsatisfiable. By Lemma 1, $$S'$$ contains at least 1 positive
 clause and 1 negative clause. A clause that is both positive and horn
 must either be a unit clause or an empty clause. We cannot derive
