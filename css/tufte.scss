@@ -282,7 +282,11 @@ ul { width: 80%;
      -webkit-padding-end: 7.5%;
      list-style-type: none; }
 
-//ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
+ol { width: 80%;
+     -webkit-padding-start: 7.5%;
+     -webkit-padding-end: 7.5%; }
+
+ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
 figure, figure img.maincolumn { max-width: 55%;
          -webkit-margin-start: 0;
