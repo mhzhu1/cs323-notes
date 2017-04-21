@@ -37,7 +37,7 @@ P[X_{t+1}=j-1\mid X_{t}=j] & \leq & \frac{1}{2}
 $$
 
 
-By Stirling's approximation, $$n!\sim\sqrt{2\pi n}(\frac{n}{e})^{n}$$
+By Stirling's approximation, $${3j \choose j} = \frac{(3j)!}{(2j)!j!}$$
 so 
 
 \$$
