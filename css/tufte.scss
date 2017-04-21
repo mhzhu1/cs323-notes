@@ -278,13 +278,13 @@ section { padding-top: 1rem;
 p, ol, ul { font-size: 1.4rem; }
 
 ul { width: 87.5%;
-     -webkit-padding-start: 3%;
-     -webkit-padding-end: 3%;
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%;
      list-style-type: none; }
 
 ol { width: 87.5%;
-     -webkit-padding-start: 3%;
-     -webkit-padding-end: 3%; }
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%; }
 
 ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
@@ -467,10 +467,16 @@ ul.footer-links li{
 
 //Full width page styling stuff
 
-body.full-width, .content-listing, ul.content-listing, ol.content-listing li.listing{ width: 90%;
+body.full-width, .content-listing, li.listing{ width: 90%;
        margin-left: auto;
        margin-right: auto;
        padding: 0% 5%;
+
+}
+ul.content-listing, ol.content-listing{ width: 90%;
+       margin-left: auto;
+       margin-right: auto;
+       padding: 0% 2.5%;
 
 }
 .full-width article p{
