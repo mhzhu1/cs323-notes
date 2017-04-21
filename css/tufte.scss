@@ -277,17 +277,17 @@ section { padding-top: 1rem;
 
 p, ol, ul { font-size: 1.4rem; }
 
-ul { width: 80%;
-     -webkit-padding-start: 7.5%;
-     -webkit-padding-end: 7.5%;
+ul { width: 82.5%;
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%;
      list-style-type: none; }
 
-ol { width: 80%;
-     -webkit-padding-start: 7.5%;
-     -webkit-padding-end: 7.5%;
+ol { width: 82.5%;
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%;
      list-style-type: none; }
 
-ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
+//ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
 figure, figure img.maincolumn { max-width: 55%;
          -webkit-margin-start: 0;
