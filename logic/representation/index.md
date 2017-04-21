@@ -336,7 +336,7 @@ moves to the right. Using the formula above, we have that $$q_{j}\geq{3j \choose
 By Stirling's approximation, $$n!\sim\sqrt{2\pi n}(\frac{n}{e})^{n}$$
 so 
 
-    $$
+\$$
 \begin{eqnarray*}
 {3j \choose j} & = & \frac{(3j)!}{(2j)!j!}\\
  & \geq & \frac{c\sqrt{2\pi3j}}{\sqrt{2\pi j}\sqrt{2\pi2j}}(\frac{3j}{e})^{3j}(\frac{e}{2j})^{2j}(\frac{e}{j})^{j}\\
@@ -395,15 +395,11 @@ with largest $$\Delta=$$ make count - break count
 
 ### Simulated annealing
 
-Randomly pick a variable, calculate $$\Delta E=$$ make count - break
+1. Randomly pick a variable, calculate $$\Delta E=$$ make count - break
 count
-
-If the new state is a better state (lower energy), always make the
+1. If the new state is a better state (lower energy), always make the
 transition
-
-Otherwise, accept the transition with probability $$p=\exp(\frac{-\Delta E}{T})$$
+1. Otherwise, accept the transition with probability $$p=\exp(\frac{-\Delta E}{T})$$
 where T is the temperature parameter
 
-Need some randomness so don't get trapped in local minima (consider
-the function of the number of unsatisfiable clauses over possible
-truth assignments on the Boolean hypercube)
+Note that we need some randomness so don't get trapped in local minima
