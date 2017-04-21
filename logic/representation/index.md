@@ -1,3 +1,7 @@
+---
+layout: post
+title: Propositional Logic
+---
 ### Engineering considerations (from slides)
 
 4 key features of SAT solvers:
