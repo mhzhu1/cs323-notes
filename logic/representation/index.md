@@ -343,6 +343,7 @@ so
  & = & \frac{a}{\sqrt{j}}(\frac{27}{4})^{j}
 \end{eqnarray*}
 $$
+{:center: style="text-align: center"}
 
 for $$j>0$$. Combining this bound with our previous expression, $$q_{j}\geq\frac{a}{\sqrt{j}}(\frac{1}{2})^{j}$$
 for $$j>0$$. The boundary condition is $$q_{0}=1$$.
