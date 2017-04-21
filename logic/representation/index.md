@@ -160,22 +160,12 @@ We'll first consider the following algorithm for solving 2-CNF formulas
 (a CNF formula where every clause has at most 2 variables) and then
 generalize later.
 
-1. Repeat $$b$$ times:
-   1. Pick an arbitrary truth assignment $$x$$
-   1. Repeat $$2n^{2}$$ times:
-
-
+Input: a 2-CNF formula with $$n$$ variables
 1. Repeat $$b$$ times:
     1. Pick an arbitrary truth assignment $$x$$
     1. Repeat $$2n^{2}$$ times:
-
-
-Input: a 2-CNF formula with $$n$$ variables
-1. Repeat $$b$$ times:
-   1. Pick an arbitrary truth assignment $$x$$
-   1. Repeat $$2n^{2}$$ times:
-            1. If $$x$$ satisfies all clauses, return satisfiable
-            1. Otherwise, pick any clause that is not satisfied and choose one of
+        1. If $$x$$ satisfies all clauses, return satisfiable
+        1. Otherwise, pick any clause that is not satisfied and choose one of
 the variables uniformly at random from this clause and flip the truth
 assignment of that variable
 1. Return unsatisfiable
@@ -207,14 +197,12 @@ corresponding truth assignment in $$a$$ (because $$a$$ is a satisfying
 assignment). In either the case where one of the variables is set
 incorrectly or both of the variables are set incorrectly, the following
 inequalities hold for the transition probabilities:
-
 $$
 \begin{eqnarray*}
 P[X_{t+1}=j+1\mid X_{t}=j] & \geq & \frac{1}{2}\\
 P[X_{t+1}=j-1\mid X_{t}=j] & \leq & \frac{1}{2}
 \end{eqnarray*}
 $$
-
 for any $$1\leq j\leq n-1$$ and all time steps $$t$$. For the boundary
 cases, we have that $$P[X_{t+1}=1\mid X_{t}=0]=1$$ and $$P[X_{t+1}=n\mid X_{t}=n]=1$$
 for all $$t$$.
@@ -282,14 +270,12 @@ assignment of that variable
 
 Using a similar analysis as in the last lecture, the bounds for the
 transition probabilities become
-
 $$
 \begin{eqnarray*}
 P[X_{t+1}=j+1\mid X_{t}=j] & \geq & \frac{1}{3}\\
 P[X_{t+1}=j-1\mid X_{t}=j] & \leq & \frac{2}{3}
 \end{eqnarray*}
 $$
-
 for any $$1\leq j\leq n-1$$ and all time steps $$t$$. For the boundary
 cases, we have that $$P[X_{t+1}=1\mid X_{t}=0]=1$$ and $$P[X_{t+1}=n\mid X_{t}=n]=1$$
 for all $$t$$.
