@@ -286,7 +286,7 @@ ol { width: 87.5%;
      -webkit-padding-start: 5%;
      -webkit-padding-end: 5%; }
 
-//ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
+ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
 figure, figure img.maincolumn { max-width: 55%;
          -webkit-margin-start: 0;
@@ -476,7 +476,7 @@ body.full-width, .content-listing, li.listing{ width: 90%;
 ul.content-listing, ol.content-listing{ width: 90%;
        margin-left: 0;
        margin-right: 0;
-       padding: 0% 2.5%;
+       padding: 0% 5%;
 
 }
 .full-width article p{
