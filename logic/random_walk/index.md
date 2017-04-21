@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Inference - random walk SAT solvers
+title: Random walk algorithm for 2-SAT
 ---
-# Random walk algorithm for 2-SAT
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Representation - Propositional Logic
+title: Representation - propositional logic
 ---
 We begin our course by studying propositional logic. After we introduce
 the definitions, we will discuss satisfiability in propositional logic
