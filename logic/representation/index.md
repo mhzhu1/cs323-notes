@@ -16,7 +16,7 @@ Runtime distribution of backtrack search methods exhibits a heavy-tail
 The size of the search tree varies dramatically, depending on the
 order in which we pick the variables
 
-## Special cases of SAT problems
+# Special cases of SAT problems
 
 We now discuss two special cases of satisfiability problems that can
 be solved in polynomial time, Horn SAT and 2-SAT. These problems define
@@ -25,7 +25,7 @@ By restricting the expressive power of the language, these subclasses
 of problems become easier to solve. The algorithms for solving these
 problems are essentially based on unit propagation. 
 
-### Horn SAT
+## Horn SAT
 
 We begin with the relevant definitions for a Horn formula:
 
