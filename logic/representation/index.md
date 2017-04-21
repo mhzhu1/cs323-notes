@@ -5,7 +5,7 @@ title: Propositional Logic
 
 ### 2-SAT
 
-Update 15
+Update 16
 
 1. \$$\Gamma\leftarrow KB$$
 1. while $$\Gamma$$ is not empty do:
