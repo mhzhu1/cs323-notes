@@ -9,6 +9,7 @@ Probabilistic graphical modeling is a branch of machine learning that studies ho
 But what is, exactly, probabilistic modeling? When trying to solve a real-world problem using mathematics, it is very common to define a mathematical model of the world in the form of an equation.
 Perhaps the simplest model would be a linear equation of the form
 
+$$
 \begin{eqnarray*}
 
 {3j \choose j} & = & \frac{(3j)!}{(2j)!j!}\
@@ -18,3 +19,4 @@ Perhaps the simplest model would be a linear equation of the form
  & = & \frac{a}{\sqrt{j}}(\frac{27}{4})^{j}
 
 \end{eqnarray*}
+$$
