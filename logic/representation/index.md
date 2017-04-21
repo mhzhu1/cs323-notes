@@ -336,7 +336,7 @@ moves to the right. Using the formula above, we have that $$q_{j}\geq{3j \choose
 By Stirling's approximation, $$n!\sim\sqrt{2\pi n}(\frac{n}{e})^{n}$$
 so 
 
-$$
+    $$
 \begin{eqnarray*}
 {3j \choose j} & = & \frac{(3j)!}{(2j)!j!}\\
  & \geq & \frac{c\sqrt{2\pi3j}}{\sqrt{2\pi j}\sqrt{2\pi2j}}(\frac{3j}{e})^{3j}(\frac{e}{2j})^{2j}(\frac{e}{j})^{j}\\
