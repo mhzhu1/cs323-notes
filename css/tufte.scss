@@ -277,14 +277,14 @@ section { padding-top: 1rem;
 
 p, ol, ul { font-size: 1.4rem; }
 
-ul { width: 85%;
-     -webkit-padding-start: 2.5%;
-     -webkit-padding-end: 2.5%;
+ul { width: 87.5%;
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%;
      list-style-type: none; }
 
-ol { width: 85%;
-     -webkit-padding-start: 2.5%;
-     -webkit-padding-end: 2.5%;
+ol { width: 87.5%;
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%;
      list-style-type: decimal; }
 
 //ul li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
@@ -347,7 +347,7 @@ div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' 
 
 @media screen and (max-width: 760px) { p, footer,div.mathblock { width: 90%; }
                                        pre code { width: 87.5%; }
-                                       ul, ol { width: 85%; }
+                                       ul, ol { width: 87.5%; }
                                        figure { max-width: 90%; }
                                        figcaption, figure.fullwidth figcaption { margin-right: 0%;
                                                                                  max-width: none; }
