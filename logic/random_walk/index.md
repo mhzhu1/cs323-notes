@@ -4,9 +4,6 @@ title: Inference - random walk satisfiability solvers
 ---
 
 
-# Random walk algorithm for 2-SAT
-
-
 ## Introduction
 
 So far, we've introduced propositional logic and considered the problem
@@ -57,7 +54,7 @@ weights representing the probability of transitioning between the
 corresponding states.
 
 
-## Random walk algorithm for 2-SAT
+# Random walk algorithm for 2-SAT
 
 Let the state space $$S=\{0,1\}^{n}$$ be the set of vertices of the
 Boolean hypercube. Since the number of possible states is $$2^{n}$$,
