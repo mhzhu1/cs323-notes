@@ -256,7 +256,7 @@ Combining everything, the probability that we will reach state $$n$$,
 starting from a truth assignment initialized uniformly at random,
 in $$\leq3n$$ moves is
 
-$$
+\$$
 \begin{eqnarray*}
 q & \geq & \sum_{j=0}^{n}P(X_{0}=n-j)q_{j}\\
  & \geq & \frac{1}{2^{n}}+\sum_{j=1}^{n}\frac{1}{2^{n}}{n \choose j}(\frac{a}{\sqrt{j}}\frac{1}{2^{j}})\\
@@ -264,6 +264,7 @@ q & \geq & \sum_{j=0}^{n}P(X_{0}=n-j)q_{j}\\
  & \approx & \frac{a}{\sqrt{n}}(\frac{3}{4})^{n}
 \end{eqnarray*}
 $$
+{: style="text-align: center"}
 
 Therefore, the expected number of times that we have to repeat the
 procedure before getting a success is $$\frac{1}{q}\leq\frac{\sqrt{n}}{a}(\frac{4}{3})^{n}$$.
