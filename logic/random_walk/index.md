@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Random walk satisfiability solvers
+title: Inference - random walk satisfiability solvers
 ---
 
 
