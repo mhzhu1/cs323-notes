@@ -29,6 +29,7 @@ which does a random walk over the possible states to decide whether
 a formula is satisfiable. This type of search is known as a stochastic
 local search procedure.
 
+
 ## Review of Markov chains
 
 A Markov chain is a discrete stochastic process $$(X_{n},n\geq0)$$
@@ -50,6 +51,7 @@ weighted edges. Each node in the graph represents a possible state
 of the Markov chain. We have directed edges between nodes with edges
 weights representing the probability of transitioning between the
 corresponding states.
+
 
 ## Random walk algorithm for 2-SAT
 
@@ -131,15 +133,15 @@ h_{j} & = & \frac{h_{j-1}+h_{j+1}}{2}+1
 \end{eqnarray*}
 $$
 
-Claim 1: $$h_{j}=h_{j+1}+2j+1$$
+**Claim 1**: $$h_{j}=h_{j+1}+2j+1$$
 
-Proof of Claim 1: Define $$f_{j}=h_{j}-h_{j-1}$$. From the recurrence
+***Proof***: Define $$f_{j}=h_{j}-h_{j-1}$$. From the recurrence
 relation above, we have that $$f_{j+1}=f_{j}-2$$. Since $$f_{1}=-1$$
 by the boundary condition, it follows that $$f_{j+1}=-(2j+1)$$.
 
-Claim 2: $$h_{j}=n^{2}-j^{2}$$
+**Claim 2**: $$h_{j}=n^{2}-j^{2}$$
 
-Proof of Claim 2: Since $$h_{n}=0$$ by the boundary condition, it follows
+***Proof***: Since $$h_{n}=0$$ by the boundary condition, it follows
 from repeated application of Claim 1 that $$h_{j}=\sum_{i=j}^{n-1}(2i+1)$$.
 
 Thus, we see that if the formula is satisfiable, the random walk will
@@ -152,6 +154,7 @@ many independent runs of this algorithm, the failure probability for
 this random walk algorithm can be lowered to at most $$(\frac{1}{2})^{b}$$.
 Thus, we see that this random walk algorithm provably solves 2-SAT
 in polynomial time.
+
 
 # Random walk algorithm for 3-SAT
 
@@ -171,6 +174,7 @@ Input: a 3-CNF formula $$\phi(x_{1},...,x_{n})$$
 the variables uniformly at random from this clause and flip the truth
 assignment of that variable
 1. Return unsatisfiable
+
 
 ## Analysis of algorithm for 3-SAT
 
@@ -269,7 +273,9 @@ conclusion, we've seen that we can go from a biased random walk with
 $$h_{j}=O(2^{n})$$ to an expected run time of $$O((\frac{4}{3})^{n})$$
 by using very aggressive random restarts.
 
+
 # Other variants
+
 
 ## WalkSAT
 
@@ -283,6 +289,7 @@ the truth assignment of $$c$$
 1. Otherwise, go through all the variables in $$c$$ and choose the variable
 with the smallest break count to flip (number of satisfied clauses
 that become unsatisfied when the variable is flipped).
+
 
 ## GSAT
 

@@ -10,9 +10,9 @@ This course is a graduate level introduction to automated reasoning techniques a
 
 ## Logical Reasoning
 
-1. [Representation - propositional logic](logic/representation/): Definitions: syntax, semantics, knowledge base. Satisfiability: inference reduces to satisfiability, conjunctive normal form.
-2. [Inference - SAT solvers](logic/inference/): Brute force, early stopping, unit resolution, DPLL algorithm, conflict-driven clause learning, engineering considerations. Special cases of SAT problems: Horn SAT and 2-SAT.
-3. [Inference - random walk SAT solvers](logic/random_walk/): Random walk algorithm for 2-SAT: introduction, review of Markov chains, algorithm, analysis of algorithm. Random walk algorithm for 3-SAT. Other variants.
+- [Representation - propositional logic](logic/representation/): Definitions: syntax, semantics, knowledge base. Satisfiability: inference reduces to satisfiability, conjunctive normal form.
+- [Inference - SAT solvers](logic/inference/): Brute force, early stopping, unit resolution, DPLL algorithm, conflict-driven clause learning, engineering considerations. Special cases of SAT problems: Horn SAT and 2-SAT.
+- [Inference - random walk SAT solvers](logic/random_walk/): Random walk algorithm for 2-SAT: introduction, review of Markov chains, algorithm, analysis of algorithm. Random walk algorithm for 3-SAT. Other variants.
 
 
 ## Probabilistic Reasoning

@@ -2,6 +2,7 @@
 layout: post
 title: Representation - propositional logic
 ---
+
 We begin our course by studying propositional logic. After we introduce
 the definitions, we will discuss satisfiability in propositional logic
 and then move on to state of the art techniques to solve systems specified
