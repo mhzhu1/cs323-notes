@@ -3,6 +3,7 @@ layout: post
 title: Inference - satisfiability solvers
 ---
 
+
 ## Brute force
 
 The brute force approach to checking satisfiability is to go through

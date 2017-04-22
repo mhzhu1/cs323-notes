@@ -1,7 +1,11 @@
 ---
 layout: post
-title: Random walk algorithm for 2-SAT
+title: Random walk satisfiability solvers
 ---
+
+
+# Random walk algorithm for 2-SAT
+
 
 ## Introduction
 
