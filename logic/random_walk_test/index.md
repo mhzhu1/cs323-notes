@@ -66,19 +66,13 @@ We’ll first consider the following algorithm for solving 2-CNF formulas
 generalize later.
 
 Input: a 2-CNF formula with $$n$$ variables
-
 1.  Repeat $$b$$ times:
-
     1.  Pick an arbitrary truth assignment $$x$$
-
     2.  Repeat $$2n^{2}$$ times:
-
         1.  If $$x$$ satisfies all clauses, return satisfiable
-
         2.  Otherwise, pick any clause that is not satisfied and choose
             one of the variables uniformly at random from this clause
             and flip the truth assignment of that variable
-
 2.  Return unsatisfiable
 
 ## Analysis of algorithm for 2-SAT
@@ -171,19 +165,13 @@ see later on in this lecture why we choose to repeat the inner loop $$3n$$
 times and always generate our truth assignment $$x$$ uniformly at random.
 
 Input: a 3-CNF formula $$\phi(x_{1},...,x_{n})$$
-
 1.  Repeat $$b$$ times:
-
     1.  Select truth assignment $$x$$ uniformly at random
-
     2.  Repeat $$3n$$ times:
-
         1.  If $$x$$ satisfies all clauses in $$\phi$$, return satisfiable
-
         2.  Otherwise, pick any clause that is not satisfied and choose
             one of the variables uniformly at random from this clause
             and flip the truth assignment of that variable
-
 2.  Return unsatisfiable
 
 ## Analysis of algorithm for 3-SAT
@@ -302,30 +290,23 @@ difference is that when trying to fix a violated clause, WalkSAT will be
 greedy with some probability.
 
 After selecting a clause $$c$$,
-
 1.  With probability $$p$$, pick a variable in $$c$$ at random and flip the
     truth assignment of $$c$$
-
 2.  Otherwise, go through all the variables in $$c$$ and choose the
     variable with the smallest break count to flip (number of satisfied
     clauses that become unsatisfied when the variable is flipped).
 
 ## GSAT
-
 1.  With probability $$p$$, choose a variable at random and flip the truth
     assignment
-
 2.  Otherwise, check all variables $$x_{1}...x_{n}$$ and select the
     variable with largest $${\Delta}=$$ make count - break count
 
 ## Simulated annealing
-
 1.  Randomly pick a variable, calculate $${\Delta}E=$$ make count - break
     count
-
 2.  If the new state is a better state (lower energy), always make the
     transition
-
 3.  Otherwise, accept the transition with probability
     $$p=\exp{\left(\frac{-{\Delta}E}{T}\right)}$$ where T is the
     temperature parameter

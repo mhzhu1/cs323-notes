@@ -123,13 +123,9 @@ backtracking might go down the same path multiple times.
 ## Engineering considerations
 
 Key features of SAT solvers:
-
 1.  Conflict-driven clause learning
-
 2.  Unit propagation with watched literals
-
 3.  Dynamic variable selection/branching heuristic
-
 4.  Random restarts
 
 An efficient implementation of unit propagation is very important since
@@ -205,40 +201,26 @@ point, so there must exist an empty clause.
 A formula is in k-CNF if it is in CNF and each clause has at most k
 literals. The following algorithm can be used to determine the
 satisfiability of a 2-CNF formula in polynomial time.
-
 1.  $${\Gamma}\leftarrow KB$$
-
 2.  while $${\Gamma}$$ is not empty do:
-
     1.  $$L\leftarrow\text{pick a literal from }{\Gamma}$$
-
     2.  $${\Delta}\leftarrow\text{UP}({\Gamma},L)$$
-
     3.  if $$\{\}\in{\Delta}$$ then
-
         1.  $${\Delta}\leftarrow\text{UP}({\Gamma},\neg L)$$
-
         2.  if $$\{\}\in{\Delta}$$ then return unsatisfiable
-
     4.  $${\Gamma}\leftarrow{\Delta}$$
-
 3.  Return satisfiable
 
 **Lemma**: If $${\Gamma}$$ is a 2-CNF formula in which the literal $$L$$
 occurs, then either:
-
 1.  $$\text{UP}({\Gamma},L)$$ contains the empty clause $$\{\}$$, so
     $${\Gamma}\models\neg L$$.
-
 2.  $$\text{UP}({\Gamma},L)$$ is a proper subset of $${\Gamma}$$.
 
 ***Proof***: For each clause, we consider one of the three cases.
-
 1.  If the clause contains $$L$$, then the clause is satisfied.
-
 2.  If the clause contains $$\neg L$$, then this clause becomes a unit
     clause and unit propagation is triggered.
-
 3.  Otherwise, the clause remains unchanged.
 
 ***Proof of correctness*** ($$\Rightarrow$$): If the algorithm returns

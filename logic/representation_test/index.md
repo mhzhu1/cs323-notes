@@ -86,10 +86,8 @@ cases that could result are always true, depends, and always false.
 
 Inference problem: Does $${\alpha}\Rightarrow\beta$$? We can solve this by
 checking if $${\alpha}\land\neg\beta$$ is satisfiable.
-
 1.  If not satisfiable, then we know that $${\alpha}\Rightarrow\beta$$.
     This is similar to the idea behind proof by contradiction.
-
 2.  If satisfiable, then there are two possible cases. Check if
     $${\alpha}\land\beta$$ is satisfiable. If $${\alpha}\land\beta$$ is
     satisfiable, then there is no definitive answer. If
@@ -116,16 +114,13 @@ norm form or CNF) if a sentence is a conjunction of disjunctions.
 
 Given any formula, we can always convert it into CNF using the following
 procedure:
-
 1.  The first step is to remove syntactic sugar, e.g. change
     $${\alpha}\Rightarrow\beta$$ into $$\neg{\alpha}\lor\beta$$. After this
     step, we should only have negations, conjunctions, and disjunctions.
-
 2.  Push negations in. Negations should only appear in front of
     propositional variables. For example, change $$\neg\neg{\alpha}$$ into
     $${\alpha}$$ and $$\neg({\alpha}\lor\beta)$$ into
     $${\left(\neg{\alpha}\land\neg\beta\right)}$$.
-
 3.  Distribute disjunctions over conjunctions, e.g. change
     $${\alpha}\lor(\beta\land\gamma)$$ into
     $$({\alpha}\lor\beta)\land({\alpha}\lor\gamma)$$. (Note that
