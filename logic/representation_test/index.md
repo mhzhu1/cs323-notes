@@ -20,10 +20,8 @@ We denote our propositional variables by $$p_{1},...,p_{n}$$ where each
 $$p_{i}$$ is a binary variable that can be true or false.
 
 Sentences are defined recursively as follows:
-
 -   A propositional variable is a sentence (this is known as an
     atomic sentence)
-
 -   If $$\alpha$$ and $$\beta$$ are sentences, then $$\neg\alpha$$,
     $$\alpha\lor\beta$$, and $$\alpha\land\beta$$ are valid sentences
 
@@ -36,18 +34,13 @@ variables.
 
 We determine if a sentence $${\alpha}$$ is true in a world $${\omega}$$
 using the following recursive rules:
-
 -   $${\omega}\models p_{i}$$ if and only if $${\omega}(p_{i})$$ is true
-
 -   $${\omega}\models\neg{\alpha}$$ if and only if
     $${\omega}\not\models{\alpha}$$
-
 -   $${\omega}\models{\alpha}\lor\beta$$ if and only if
     ($${\omega}\models{\alpha}$$) OR ($${\omega}\models\beta$$)
-
 -   $${\omega}\models{\alpha}\land\beta$$ if and only if
     ($${\omega}\models{\alpha}$$) AND ($${\omega}\models\beta$$)
-
 -   (Note that $${\alpha}\Rightarrow\beta$$ is syntactic sugar for
     $$\neg\alpha\lor\beta$$, and we can use the rules above)
 
@@ -138,7 +131,8 @@ Consider what happens when we set a propositional variable $$P$$ to true.
 If P does not belong to a given clause, then that clause is unaffected.
 If P belongs to a given clause, then that clause becomes satisfied and
 we can remove that clause from the formula. The resulting formula can be
-expressed as.
+expressed as
+$$\Delta|P=\{\alpha\backslash\{\neg P\}\mid\alpha\in\Delta,P\notin\alpha\}$$.
 
 ## Satisfiability solvers
 
@@ -190,18 +184,13 @@ and pure literals. With these heuristics, DPLL is a very effective
 backtracking SAT solver.
 
 The recursive algorithm for DPLL is as follows. $$DPLL(\phi,{\alpha})$$
-
--   If $$\phi\|{\alpha}$$ is empty, return satisfiable
-
--   If $$\phi\|{\alpha}$$ contains an empty clause, return unsatisfiable
-
--   If $$\phi\|{\alpha}$$ contains a unit clause $$\{p\}$$, return
+-   If $$\phi|{\alpha}$$ is empty, return satisfiable
+-   If $$\phi|{\alpha}$$ contains an empty clause, return unsatisfiable
+-   If $$\phi|{\alpha}$$ contains a unit clause $$\{p\}$$, return
     $$DPLL(\phi,{\alpha}p)$$
-
--   If $$\phi\|{\alpha}$$ has a pure literal $$p$$, return
+-   If $$\phi|{\alpha}$$ has a pure literal $$p$$, return
     $$DPLL(\phi,{\alpha}p)$$
-
--   Let $$p$$ be a literal from a minimum size clause of $$\phi\|{\alpha}$$.
+-   Let $$p$$ be a literal from a minimum size clause of $$\phi|{\alpha}$$.
     If $$DPLL(\phi,{\alpha}p)$$ returns satisfiable, return satisfiable.
     Else, return $$DPLL(\phi,{\alpha}\neg p)$$.
 

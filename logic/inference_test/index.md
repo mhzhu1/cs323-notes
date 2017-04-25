@@ -51,18 +51,13 @@ and pure literals. With these heuristics, DPLL is a very effective
 backtracking SAT solver.
 
 The recursive algorithm for DPLL is as follows. $$DPLL(\phi,{\alpha})$$
-
--   If $$\phi\|{\alpha}$$ is empty, return satisfiable
-
--   If $$\phi\|{\alpha}$$ contains an empty clause, return unsatisfiable
-
--   If $$\phi\|{\alpha}$$ contains a unit clause $$\{p\}$$, return
+-   If $$\phi|{\alpha}$$ is empty, return satisfiable
+-   If $$\phi|{\alpha}$$ contains an empty clause, return unsatisfiable
+-   If $$\phi|{\alpha}$$ contains a unit clause $$\{p\}$$, return
     $$DPLL(\phi,{\alpha}p)$$
-
--   If $$\phi\|{\alpha}$$ has a pure literal $$p$$, return
+-   If $$\phi|{\alpha}$$ has a pure literal $$p$$, return
     $$DPLL(\phi,{\alpha}p)$$
-
--   Let $$p$$ be a literal from a minimum size clause of $$\phi\|{\alpha}$$.
+-   Let $$p$$ be a literal from a minimum size clause of $$\phi|{\alpha}$$.
     If $$DPLL(\phi,{\alpha}p)$$ returns satisfiable, return satisfiable.
     Else, return $$DPLL(\phi,{\alpha}\neg p)$$.
 
@@ -161,17 +156,13 @@ solving these problems are essentially based on unit propagation.
 ## Horn SAT
 
 We begin with the relevant definitions for a Horn formula:
-
 -   A literal is a positive literal if it is some variable. A literal is
     a negative literal if it is the negation of some variable.
-
 -   A clause is positive if all of the literals are positive. A clause
     is negative if all of the literals are negative.
-
 -   A clause is horn if it has at most one literal that is positive. For
     example, the implication $$(p\land q)\Rightarrow z$$ is equivalent to
     $$\neg p\lor\neg q\lor z$$ which is horn.
-
 -   A formula is horn if all of the clauses are horn.
 
 **Lemma**: Let $$S$$ be a set of unsatisfiable clauses. Then $$S$$ contains
@@ -201,21 +192,21 @@ point, so there must exist an empty clause.
 A formula is in k-CNF if it is in CNF and each clause has at most k
 literals. The following algorithm can be used to determine the
 satisfiability of a 2-CNF formula in polynomial time.
-1.  $${\Gamma}\leftarrow KB$$
+1.  \$${\Gamma}\leftarrow KB$$
 2.  while $${\Gamma}$$ is not empty do:
-    1.  $$L\leftarrow\text{pick a literal from }{\Gamma}$$
-    2.  $${\Delta}\leftarrow\text{UP}({\Gamma},L)$$
+    1.  \$$L\leftarrow\text{pick a literal from }{\Gamma}$$
+    2.  \$${\Delta}\leftarrow\text{UP}({\Gamma},L)$$
     3.  if $$\{\}\in{\Delta}$$ then
-        1.  $${\Delta}\leftarrow\text{UP}({\Gamma},\neg L)$$
+        1.  \$${\Delta}\leftarrow\text{UP}({\Gamma},\neg L)$$
         2.  if $$\{\}\in{\Delta}$$ then return unsatisfiable
-    4.  $${\Gamma}\leftarrow{\Delta}$$
+    4.  \$${\Gamma}\leftarrow{\Delta}$$
 3.  Return satisfiable
 
 **Lemma**: If $${\Gamma}$$ is a 2-CNF formula in which the literal $$L$$
 occurs, then either:
-1.  $$\text{UP}({\Gamma},L)$$ contains the empty clause $$\{\}$$, so
+1.  \$$\text{UP}({\Gamma},L)$$ contains the empty clause $$\{\}$$, so
     $${\Gamma}\models\neg L$$.
-2.  $$\text{UP}({\Gamma},L)$$ is a proper subset of $${\Gamma}$$.
+2.  \$$\text{UP}({\Gamma},L)$$ is a proper subset of $${\Gamma}$$.
 
 ***Proof***: For each clause, we consider one of the three cases.
 1.  If the clause contains $$L$$, then the clause is satisfied.
