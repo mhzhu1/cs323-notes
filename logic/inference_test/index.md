@@ -205,9 +205,9 @@ satisfiability of a 2-CNF formula in polynomial time.
 
 **Lemma**: If $${\Gamma}$$ is a 2-CNF formula in which the literal $$L$$
 occurs, then either:
-1.  \$$\text{UP}(\Gamma,L)$$ contains the empty clause $$\{\}$$, so
+1.  UP$$(\Gamma,L)$$ contains the empty clause $$\{\}$$, so
     $${\Gamma}\models\neg L$$.
-2.  \$$\text{UP}(\Gamma,L)$$ is a proper subset of $${\Gamma}$$.
+2.  UP$$(\Gamma,L)$$ is a proper subset of $${\Gamma}$$.
 
 ***Proof***: For each clause, we consider one of the three cases.
 1.  If the clause contains $$L$$, then the clause is satisfied.
