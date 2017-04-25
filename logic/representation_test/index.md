@@ -138,8 +138,7 @@ Consider what happens when we set a propositional variable $$P$$ to true.
 If P does not belong to a given clause, then that clause is unaffected.
 If P belongs to a given clause, then that clause becomes satisfied and
 we can remove that clause from the formula. The resulting formula can be
-expressed as
-$$\Delta\|P=\{{\alpha}\backslash\{\neg P\}\mid{\alpha}\in{\Delta},P\notin{\alpha}\}$$.
+expressed as.
 
 ## Satisfiability solvers
 
