@@ -108,8 +108,12 @@ assignment). In either the case where one of the variables is set
 incorrectly or both of the variables are set incorrectly, the following
 inequalities hold for the transition probabilities:
 
-\$$\begin{eqnarray*}P[X_{t+1}=j+1\mid X_{t}=j] & \geq & \frac{1}{2}\\
-P[X_{t+1}=j-1\mid X_{t}=j] & \leq & \frac{1}{2}\end{eqnarray*}$$
+\$$
+\begin{eqnarray*}
+P[X_{t+1}=j+1\mid X_{t}=j] & \geq & \frac{1}{2}\\
+P[X_{t+1}=j-1\mid X_{t}=j] & \leq & \frac{1}{2}
+\end{eqnarray*}
+\$$
 {: style="text-align: center"}
 
 for any $$1\leq j\leq n-1$$ and all time steps $$t$$. For the boundary
@@ -127,8 +131,12 @@ define $$h_{j}=E[y_{j}]$$. Note that the variables take on the boundary
 values $$h_{n}=0$$ and $$h_{0}=1+h_{1}$$. The expected number of steps are
 related via the formula:
 
-\$$\begin{eqnarray*}E[y_{j}] & = & \frac{1}{2}{\left(1+E[y_{j-1}]\right)}+\frac{1}{2}{\left(1+E[y_{j+1}]\right)}\\
-h_{j} & = & \frac{h_{j-1}+h_{j+1}}{2}+1\end{eqnarray*}$$
+\$$
+\begin{eqnarray*}
+E[y_{j}] & = & \frac{1}{2}{\left(1+E[y_{j-1}]\right)}+\frac{1}{2}{\left(1+E[y_{j+1}]\right)}\\
+h_{j} & = & \frac{h_{j-1}+h_{j+1}}{2}+1
+\end{eqnarray*}
+\$$
 {: style="text-align: center"}
 
 Claim 1: $$h_{j}=h_{j+1}+2j+1$$
@@ -183,8 +191,12 @@ Input: a 3-CNF formula $$\phi(x_{1},...,x_{n})$$
 Using a similar analysis as in the last lecture, the bounds for the
 transition probabilities become
 
-\$$\begin{eqnarray*}P[X_{t+1}=j+1\mid X_{t}=j] & \geq & \frac{1}{3}\\
-P[X_{t+1}=j-1\mid X_{t}=j] & \leq & \frac{2}{3}\end{eqnarray*}$$
+\$$
+\begin{eqnarray*}
+P[X_{t+1}=j+1\mid X_{t}=j] & \geq & \frac{1}{3}\\
+P[X_{t+1}=j-1\mid X_{t}=j] & \leq & \frac{2}{3}
+\end{eqnarray*}
+\$$
 {: style="text-align: center"}
 
 for any $$1\leq j\leq n-1$$ and all time steps $$t$$. For the boundary
@@ -196,7 +208,11 @@ define $$h_{j}=E[y_{j}]$$. Note that the variables take on the boundary
 values $$h_{n}=0$$ and $$h_{0}=1+h_{1}$$. The expected number of steps are
 related via the formula:
 
-\$$\begin{eqnarray*}h_{j} & = & \frac{2}{3}h_{j-1}+\frac{1}{3}h_{j+1}+1\\\end{eqnarray*}$$
+\$$
+\begin{eqnarray*}
+h_{j} & = & \frac{2}{3}h_{j-1}+\frac{1}{3}h_{j+1}+1\\
+\end{eqnarray*}
+\$$
 {: style="text-align: center"}
 
 Define $$f_{j}=h_{j}-h_{j-1}$$. From the recurrence relation above, we
@@ -239,9 +255,13 @@ $$q_{j}\geq{3j \choose j}{\left(\frac{2}{3}\right)}^{j}{\left(\frac{1}{3}\right)
 By Stirling’s approximation,
 $$n!\sim\sqrt{2\pi n}{\left(\frac{n}{e}\right)}^{n}$$ so
 
-\$$\begin{eqnarray*}{3j \choose j} & = & \frac{(3j)!}{(2j)!j!}\\
+\$$
+\begin{eqnarray*}
+{3j \choose j} & = & \frac{(3j)!}{(2j)!j!}\\
  & \geq & \frac{c\sqrt{2\pi3j}}{\sqrt{2\pi j}\sqrt{2\pi2j}}{\left(\frac{3j}{e}\right)}^{3j}{\left(\frac{e}{2j}\right)}^{2j}{\left(\frac{e}{j}\right)}^{j}\\
- & = & \frac{a}{\sqrt{j}}{\left(\frac{27}{4}\right)}^{j}\end{eqnarray*}$$
+ & = & \frac{a}{\sqrt{j}}{\left(\frac{27}{4}\right)}^{j}
+\end{eqnarray*}
+\$$
 {: style="text-align: center"}
 
 for $$j>0$$. Combining this bound with our previous expression,
@@ -252,10 +272,14 @@ Combining everything, the probability that we will reach state $$n$$,
 starting from a truth assignment initialized uniformly at random, in
 $$\leq3n$$ moves is
 
-\$$\begin{eqnarray*}q & \geq & \sum_{j=0}^{n}P(X_{0}=n-j)q_{j}\\
+\$$
+\begin{eqnarray*}
+q & \geq & \sum_{j=0}^{n}P(X_{0}=n-j)q_{j}\\
  & \geq & \frac{1}{2^{n}}+\sum_{j=1}^{n}\frac{1}{2^{n}}{n \choose j}{\left(\frac{a}{\sqrt{j}}\frac{1}{2^{j}}\right)}\\
  & \geq & \frac{1}{2^{n}}+\frac{1}{2^{n}}\frac{a}{\sqrt{n}}\sum_{j=1}^{n}{n \choose j}\frac{1}{2^{j}}\\
- & \approx & \frac{a}{\sqrt{n}}{\left(\frac{3}{4}\right)}^{n}\end{eqnarray*}$$
+ & \approx & \frac{a}{\sqrt{n}}{\left(\frac{3}{4}\right)}^{n}
+\end{eqnarray*}
+\$$
 {: style="text-align: center"}
 
 Therefore, the expected number of times that we have to repeat the
