@@ -57,15 +57,12 @@ new information), or go to zero (if the new sentence is inconsistent
 with the existing knowledge base).
 
 We will make use of the following definitions:
-
-A sentence is satisfiable (consistent) if there exists at least one
-world that makes the sentence true, i.e. $$Models({\alpha})\ne\phi$$.
-
-A sentence is valid if the sentence is true in every possible world,
-i.e. $$Models({\alpha})={\Omega}=\{0,1\}^{n}$$.
-
-Two sentences are equivalent if they are true in the same models, e.g.
-$${\alpha}\lor\beta$$ and $$\beta\lor\alpha$$.
+-   A sentence is satisfiable (consistent) if there exists at least one
+    world that makes the sentence true, i.e. $$Models({\alpha})\ne\phi$$.
+-   A sentence is valid if the sentence is true in every possible
+    world, i.e. $$Models({\alpha})={\Omega}=\{0,1\}^{n}$$.
+-   Two sentences are equivalent if they are true in the same
+    models, e.g. $${\alpha}\lor\beta$$ and $$\beta\lor\alpha$$.
 
 # Satisfiability
 

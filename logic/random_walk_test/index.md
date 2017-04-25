@@ -133,17 +133,16 @@ h_{j} & = & \frac{h_{j-1}+h_{j+1}}{2}+1
 \$$
 {: style="text-align: center"}
 
-Claim 1: $$h_{j}=h_{j+1}+2j+1$$
+**Claim 1**: $$h_{j}=h_{j+1}+2j+1$$
 
-Proof of Claim 1: Define $$f_{j}=h_{j}-h_{j-1}$$. From the recurrence
-relation above, we have that $$f_{j+1}=f_{j}-2$$. Since $$f_{1}=-1$$ by the
-boundary condition, it follows that $$f_{j+1}=-(2j+1)$$.
+***Proof***: Define $$f_{j}=h_{j}-h_{j-1}$$. From the recurrence relation
+above, we have that $$f_{j+1}=f_{j}-2$$. Since $$f_{1}=-1$$ by the boundary
+condition, it follows that $$f_{j+1}=-(2j+1)$$.
 
-Claim 2: $$h_{j}=n^{2}-j^{2}$$
+**Claim 2**: $$h_{j}=n^{2}-j^{2}$$
 
-Proof of Claim 2: Since $$h_{n}=0$$ by the boundary condition, it follows
-from repeated application of Claim 1 that
-$$h_{j}=\sum_{i=j}^{n-1}(2i+1)$$.
+***Proof***: Since $$h_{n}=0$$ by the boundary condition, it follows from
+repeated application of Claim 1 that $$h_{j}=\sum_{i=j}^{n-1}(2i+1)$$.
 
 Thus, we see that if the formula is satisfiable, the random walk will
 take, in expectation, roughly $$n^{2}$$ steps to find the satisfying

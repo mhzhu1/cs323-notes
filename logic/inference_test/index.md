@@ -51,14 +51,14 @@ and pure literals. With these heuristics, DPLL is a very effective
 backtracking SAT solver.
 
 The recursive algorithm for DPLL is as follows. $$DPLL(\phi,{\alpha})$$
--   If $$\phi\vert{\alpha}$$ is empty, return satisfiable
--   If $$\phi\vert{\alpha}$$ contains an empty clause, return
+1.  If $$\phi\vert{\alpha}$$ is empty, return satisfiable
+2.  If $$\phi\vert{\alpha}$$ contains an empty clause, return
     unsatisfiable
--   If $$\phi\vert{\alpha}$$ contains a unit clause $$\{p\}$$, return
+3.  If $$\phi\vert{\alpha}$$ contains a unit clause $$\{p\}$$, return
     $$DPLL(\phi,{\alpha}p)$$
--   If $$\phi\vert{\alpha}$$ has a pure literal $$p$$, return
+4.  If $$\phi\vert{\alpha}$$ has a pure literal $$p$$, return
     $$DPLL(\phi,{\alpha}p)$$
--   Let $$p$$ be a literal from a minimum size clause of
+5.  Let $$p$$ be a literal from a minimum size clause of
     $$\phi\vert{\alpha}$$. If $$DPLL(\phi,{\alpha}p)$$ returns satisfiable,
     return satisfiable. Else, return $$DPLL(\phi,{\alpha}\neg p)$$.
 
@@ -205,9 +205,9 @@ satisfiability of a 2-CNF formula in polynomial time.
 
 **Lemma**: If $${\Gamma}$$ is a 2-CNF formula in which the literal $$L$$
 occurs, then either:
-1.  \$$\text{UP}({\Gamma},L)$$ contains the empty clause $$\{\}$$, so
+1.  \$$\text{UP}(\Gamma,L)$$ contains the empty clause $$\{\}$$, so
     $${\Gamma}\models\neg L$$.
-2.  \$$\text{UP}({\Gamma},L)$$ is a proper subset of $${\Gamma}$$.
+2.  \$$\text{UP}(\Gamma,L)$$ is a proper subset of $${\Gamma}$$.
 
 ***Proof***: For each clause, we consider one of the three cases.
 1.  If the clause contains $$L$$, then the clause is satisfied.
