@@ -68,9 +68,8 @@ entailed by existing sentences).
 
 ![image](kb.png)
 
-**Figure**: By adding $$\Delta$$ to our KB $$\Gamma$$, the number of
-possible worlds can (i) decrease, (ii) go to zero, or (iii) remain the
-same.
+*Figure: By adding $$\Delta$$ to our KB $$\Gamma$$, the number of possible
+worlds can (i) decrease, (ii) go to zero, or (iii) remain the same.*
 
 We will make use of the following definitions:
 -   A sentence is satisfiable (consistent) if there exists at least one
