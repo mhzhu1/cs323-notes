@@ -5,14 +5,23 @@ title: 'Inference - satisfiability solvers'
 
 ## Brute force
 
+![image](brute_force.png)
+
+*Figure from Chapter 3, page 1 of draft chapter on satisfiability by
+Adnan Darwiche*
+
 The brute force approach to checking satisfiability is to go through all
-possible worlds and check if the formula is satisfied. To prove
-unsatisfiability, we would need to try all possible worlds. In the worst
-case, checking satisfiability is NP-complete because the number of
-possible worlds is exponential in the number of variables, and any kind
-of reasoning algorithm would take exponential time. Nonetheless, in
-practice, one can usually solve many kinds of real-world problems
-tractably using the techniques discussed below.
+possible worlds and check if the formula is satisfied. For example, a
+brute force approach for testing the satisfiability of some formula with
+three variables A, B, and C would visit the possible worlds
+$$w_{1},w_{2},...,w_{8}$$ in some order and check if the formula is
+satisfied in any of the eight worlds. To prove unsatisfiability, we
+would need to try all possible worlds. In the worst case, checking
+satisfiability is NP-complete because the number of possible worlds is
+exponential in the number of variables, and any kind of reasoning
+algorithm would take exponential time. Nonetheless, in practice, one can
+usually solve many kinds of real-world problems tractably using the
+techniques discussed below.
 
 ## Early stopping
 
@@ -31,6 +40,20 @@ time we go down a branch and make a variable assignment, we can simplify
 the CNF. At every step, we check if there exists an empty clause which
 means that the formula cannot be satisfied. If we eliminate all of the
 clauses, then the formula is satisfiable.
+
+![image](early_stopping.png)
+
+*Figure from Chapter 3, page 2 of draft chapter on satisfiability by
+Adnan Darwiche*
+
+Going back to our earlier example with three variables A, B, and C, we
+traverse the tree starting from the root and check if the formula is
+satisfied or unsatisfiable each time we make an assignment to a
+variable. For the hypothetical formula
+$${\left(\neg A\right)}\land{\left(B\lor C\right)}$$, upon setting $$A$$ to
+true, we know that the formula becomes unsatisfiable, so we can
+immediately backtrack and set $$A$$ to false. Then when we set $$B$$ to
+true, we can immediately conclude that the formula is satisfiable.
 
 ## Unit resolution
 
@@ -115,6 +138,38 @@ since this might allow shorter clauses.
 Non-chronological backtracking is sound and complete assuming we keep
 all of the clauses that we learned. Note that non-chronological
 backtracking might go down the same path multiple times.
+
+## Example for DPLL and Clause Learning
+
+Consider the formula $${\Delta}$$ below:
+1.  \$$\{A,B\}$$
+2.  \$$\{B,C\}$$
+3.  \$$\{\neg A,\neg X,Y\}$$
+4.  \$$\{\neg A,X,Z\}$$
+5.  \$$\{\neg A,\neg Y,Z\}$$
+6.  \$$\{\neg A,X,\neg Z\}$$
+7.  \$$\{\neg A,\neg Y,\neg Z\}$$
+
+![image](dpll.png)
+
+*Figure from Chapter 3, page 8 of draft chapter on satisfiability by
+Adnan Darwiche*
+
+For DPLL, assume the variable ordering $$A,B,C,X,Y,Z$$ for the search
+procedure and variables are assigned true before being assigned false
+when branching. The result of running DPLL on this formula is given by
+the figure above. We see that the DPLL algorithm is forced to explore
+almost half of the entire tree before detecting the contradiction.
+
+![image](cdcl.png)
+
+*Figure from Chapter 3, page 11 of draft chapter on satisfiability by
+Adnan Darwiche*
+
+On the other hand, when running CDCL on the same formula with the same
+search tree, CDCL will learn a good clause to add to the KB from a cut
+in the implication graph. These learned clauses allow CDCL to traverse
+the search tree in a more efficient manner.
 
 ## Engineering considerations
 
