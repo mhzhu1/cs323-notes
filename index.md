@@ -14,6 +14,6 @@ This course is a graduate level introduction to automated reasoning techniques a
 - [Inference - SAT solvers](logic/inference/): Brute force, early stopping, unit resolution, DPLL algorithm, conflict-driven clause learning, engineering considerations, tutorial on practical SAT solvers.
 - [Tractable classes of SAT problems](logic/tractable/): Special cases of SAT problems: Horn SAT and 2-SAT.
 - [Inference - random walk SAT solvers](logic/random_walk/): Introduction, review of Markov chains. Random walk algorithm for 2-SAT and analysis. Random walk algorithm for 3-SAT and analysis. Other variants.
-
+- [References](logic/references/)
 
 ## Probabilistic Reasoning
