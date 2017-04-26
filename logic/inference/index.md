@@ -209,6 +209,6 @@ solver, developed to help researchers and developers alike to get
 started on SAT.” MiniSat can be installed from their [Github
 repository](http://github.com/niklasso/minisat). Mac users can install
 MiniSat directly using [Homebrew](https://brew.sh/) with the command
-“brew install minisat”. MiniSat usage is
+`brew install minisat`. MiniSat usage is
 `minisat [options] <input-cnf-file> <result-output-file>` where options
-can be viewed with “minisat --help”.
+can be viewed with `minisat –help`.
