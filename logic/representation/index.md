@@ -58,7 +58,7 @@ any world.
 
 ![By adding $$\Delta$$ to our KB $$\Gamma$$, the number of possible worlds
 can (i) decrease, (ii) go to zero, or (iii) remain the
-same.](kb.png){width="1\columnwidth"}
+same.](kb.png)
 
 A knowledge base is a collection of sentences
 $${\alpha}_{1},{\alpha}_{2},...,{\alpha}_{k}$$ that we know are true, i.e.
