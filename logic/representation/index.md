@@ -66,10 +66,11 @@ information), go to zero (if the new sentence is inconsistent with the
 existing knowledge base), or remain the same (if the new sentence is
 entailed by existing sentences).
 
-![image](kb)
--   Figure: By adding $$\Delta$$ to our KB $$\Gamma$$, the number of
-    possible worlds can (i) decrease, (ii) go to zero, or (iii) remain
-    the same.
+![image](kb.png)
+
+**Figure**: By adding $$\Delta$$ to our KB $$\Gamma$$, the number of
+possible worlds can (i) decrease, (ii) go to zero, or (iii) remain the
+same.
 
 We will make use of the following definitions:
 -   A sentence is satisfiable (consistent) if there exists at least one
