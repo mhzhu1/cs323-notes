@@ -56,10 +56,6 @@ any world.
 
 ## Knowledge Base
 
-![By adding $$\Delta$$ to our KB $$\Gamma$$, the number of possible worlds
-can (i) decrease, (ii) go to zero, or (iii) remain the
-same.](kb.png)
-
 A knowledge base is a collection of sentences
 $${\alpha}_{1},{\alpha}_{2},...,{\alpha}_{k}$$ that we know are true, i.e.
 $${\alpha}_{1}\land{\alpha}_{2}\land...\land{\alpha}_{k}$$. The sentences
@@ -69,6 +65,11 @@ worlds consistent with our knowledge base could decrease (if we gain new
 information), go to zero (if the new sentence is inconsistent with the
 existing knowledge base), or remain the same (if the new sentence is
 entailed by existing sentences).
+
+![image](kb)
+-   Figure: By adding $$\Delta$$ to our KB $$\Gamma$$, the number of
+    possible worlds can (i) decrease, (ii) go to zero, or (iii) remain
+    the same.
 
 We will make use of the following definitions:
 -   A sentence is satisfiable (consistent) if there exists at least one
