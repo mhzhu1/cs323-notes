@@ -156,10 +156,11 @@ Consider the formula $${\Delta}$$ below:
 Adnan Darwiche*
 
 For DPLL, assume the variable ordering $$A,B,C,X,Y,Z$$ for the search
-procedure and variables are assigned true before being assigned false
-when branching. The result of running DPLL on this formula is given by
-the figure above. We see that the DPLL algorithm is forced to explore
-almost half of the entire tree before detecting the contradiction.
+procedure and that variables are assigned true before being assigned
+false when branching. The result of running DPLL on this formula is
+given by the figure above. We see that the DPLL algorithm is forced to
+explore almost half of the entire tree before it is able to detect the
+contradiction.
 
 ![image](cdcl.png)
 

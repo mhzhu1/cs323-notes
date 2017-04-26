@@ -22,10 +22,10 @@ We begin with the relevant definitions for a Horn formula:
     $$\neg p\lor\neg q\lor z$$ which is horn.
 -   A formula is Horn if it is a formula formed by the conjunction of
     Horn clauses. For example, the formula
-    $${\left(\neg p\lor\neg q\lor z\right)}\land{\left(p\lor q\right)}$$
+    $${\left(\neg p\lor\neg q\lor z\right)}\land{\left(q\lor\neg z\right)}$$
     is Horn while
-    $${\left(\neg p\lor q\lor z\right)}\land{\left(p\lor q\right)}$$ is
-    not Horn.
+    $${\left(\neg p\lor q\lor z\right)}\land{\left(q\lor\neg z\right)}$$
+    is not Horn.
 
 **Lemma**: Let $$S$$ be a set of unsatisfiable clauses. Then $$S$$ contains
 at least one positive clause and one negative clause.
