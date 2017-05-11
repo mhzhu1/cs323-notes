@@ -146,6 +146,7 @@ Since the sequences are bounded and monotonic, $$M_{n}\to M$$ and
 $$m_{n}\to m$$ must converge.
 
 We also know that 
+
 \$$
 \begin{eqnarray*}
 M_{n}-m_{n} & \leq & (1-2d)(M_{n-1}-m_{n-1})\\
