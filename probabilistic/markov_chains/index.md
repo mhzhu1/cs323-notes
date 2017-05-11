@@ -136,11 +136,14 @@ Subtracting the two inequalities gives the desired bound.
 Let $$y\in{\mathbb{R}}^{r}$$ be an arbitrary vector. Let us study the
 sequence $$P^{n}y$$.
 
-$$M_{0}\geq M_{1}\geq M_{2}\geq...$$
-
-$$m_{0}\leq m_{1}\leq m_{2}\leq...$$
-
-$$m_{0}\leq m_{n}\leq M_{n}\leq M_{0}$$
+\$$
+\begin{eqnarray*}
+ & M_{0}\geq M_{1}\geq M_{2}\geq...\\
+ & m_{0}\leq m_{1}\leq m_{2}\leq...\\
+ & m_{0}\leq m_{n}\leq M_{n}\leq M_{0}
+\end{eqnarray*}
+\$$
+{: style="text-align: center"}
 
 Since the sequences are bounded and monotonic, $$M_{n}\to M$$ and
 $$m_{n}\to m$$ must converge.
