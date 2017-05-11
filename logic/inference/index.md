@@ -216,19 +216,19 @@ can be viewed with `minisat –help`.
 
 Examples of benchmark problems are available
 [here](http://www.cs.ubc.ca/~hoos/SATLIB/benchm.html). For example, we
-can download the
+can download
 [CBS\_k3\_n100\_m403\_b10](http://www.cs.ubc.ca/~hoos/SATLIB/Benchmarks/SAT/CBS/CBS_k3_n100_m403_b10.tar.gz)
-random 3-SAT instance which has 100 variables, 403 clauses, backbone
+random 3-SAT instances which have 100 variables, 403 clauses, backbone
 size 10 - 1000 instances, all satisfiable. After unzipping the file, we
 can solve one of the instances using MiniSat with the command
 `minisat CBS_k3_n100_m403_b10_0.cnf`. By viewing this file in a text
 editor, we see that the first 3 lines are comments (lines starting with
 “c”), the next line is the problem header `p cnf 100 403` representing
-`p FORMAT NUM_VARIABLES NUM_CLAUSES`, and each subsequent line is a
-clause where the variables in the disjunction are listed (negated
-variables appear with a negative sign and the line is terminated with a
-“0”). Variables are assumed to be ordered 1 through n. For example, the
-clause $${\left(\neg X_{9}\lor X_{40}\lor\neg X_{68}\right)}$$ is
-represented as `-9 40 -68 0`. Further instructions of the file format
-are available
+`p FORMAT NUM_VARIABLES NUM_CLAUSES`, and each subsequent line
+represents a clause where the variables in the disjunction are listed
+(negated variables appear with a negative sign and each line is
+terminated with a “0”). Variables are assumed to be numbered from 1 to
+n. For example, the clause
+$${\left(\neg X_{9}\lor X_{40}\lor\neg X_{68}\right)}$$ is represented as
+`-9 40 -68 0`. Further instructions of the file format are available
 [here](http://www.cs.ubc.ca/~hoos/SATLIB/Benchmarks/SAT/satformat.ps).
