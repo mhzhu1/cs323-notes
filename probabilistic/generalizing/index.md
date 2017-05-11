@@ -83,7 +83,8 @@ we have valid probabilities satisfying $$0\leq p(x)\leq1$$ and
 $$\sum_{x\in\{0,1\}^{n}}p(x)=1$$.
 
 We see that the probability of an assignment factorizes over the
-clauses: 
+clauses:
+
 \$$
 \begin{eqnarray*}
 p(x) & = & \frac{1}{Z}\exp{\left(-\sum_{c}w_{c}1_{c}(x)\right)}\\

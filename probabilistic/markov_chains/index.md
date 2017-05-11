@@ -149,9 +149,13 @@ We also know that
 \$$
 \begin{eqnarray*}
 M_{n}-m_{n} & \leq & (1-2d)(M_{n-1}-m_{n-1})\\
- & \leq & (1-2d)^{n}(M_{0}-m_{0})\end{aligned}$$$$ If $$r\geq2$$, then
-$$d\leq\frac{1}{2}$$ and $$0\leq1-2d<1$$, so as $$n\to\infty$$,
-$$M_{n}-m_{n}\to0$$ and so we have $$M=m$$. Therefore,
+ & \leq & (1-2d)^{n}(M_{0}-m_{0})
+\end{eqnarray*}
+\$$
+{: style="text-align: center"}
+
+If $$r\geq2$$, then $$d\leq\frac{1}{2}$$ and $$0\leq1-2d<1$$, so as
+$$n\to\infty$$, $$M_{n}-m_{n}\to0$$ and so we have $$M=m$$. Therefore,
 $$\lim_{n\to\infty}P^{n}y=\mu$$, a vector $$\mu$$ where all of the entries
 in $$\mu$$ are the same.
 
