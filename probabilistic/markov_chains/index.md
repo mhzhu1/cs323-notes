@@ -145,7 +145,9 @@ $$m_{0}\leq m_{n}\leq M_{n}\leq M_{0}$$
 Since the sequences are bounded and monotonic, $$M_{n}\to M$$ and
 $$m_{n}\to m$$ must converge.
 
-We also know that $$$$\begin{aligned}
+We also know that 
+\$$
+\begin{eqnarray*}
 M_{n}-m_{n} & \leq & (1-2d)(M_{n-1}-m_{n-1})\\
  & \leq & (1-2d)^{n}(M_{0}-m_{0})\end{aligned}$$$$ If $$r\geq2$$, then
 $$d\leq\frac{1}{2}$$ and $$0\leq1-2d<1$$, so as $$n\to\infty$$,
