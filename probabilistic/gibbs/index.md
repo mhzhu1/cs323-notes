@@ -3,7 +3,7 @@ layout: post
 title: Gibbs sampling
 ---
 
-# Sampling
+# Sampling and inference tasks
 
 In sampling, we are concerned with how to sample from a target
 probability distribution $$p(x)=\frac{w(x)}{Z}$$. Given samples
@@ -60,14 +60,19 @@ $$A(x_{i}',x_{-i}\mid x_{i},x_{-i})=\min(1,{\alpha})$$ where
 {\alpha}& = & \frac{p(x_{i}',x_{-i})Q(x_{i},x_{-i}\mid x_{i}',x_{-i})}{p(x_{i},x_{-i})Q(x_{i}',x_{-i}\mid x_{i},x_{-i})}\\
  & = & \frac{p(x_{i}',x_{-i})p(x_{i}\mid x_{-i})}{p(x_{i},x_{-i})p(x_{i}'\mid x_{-i})}\\
  & = & \frac{p(x_{i}'\mid x_{-i})p(x_{-i})p(x_{i}\mid x_{-i})}{p(x_{i}\mid x_{-i})p(x_{-i})p(x_{i}'\mid x_{-i})}\\
- & = & 1\end{aligned}$$$$ Gibbs sampling is used very often in practice
-since we don’t have to design a proposal distribution. Note that the
-Gibbs sampling algorithm described earlier is known as random scan Gibbs
-sampling because we choose an index uniformly at random in each
-iteration. A common implementation of Gibbs sampling is systematic scan
-Gibbs sampling where we have a for loop that goes through all of the
-variables $$x_{i}$$ in some order and samples $$x_{i}^{(t+1)}$$ from the
-conditional distribution of $$x_{i}'$$ given all of the other variables.
+ & = & 1
+\end{eqnarray*}
+\$$
+{: style="text-align: center"}
+
+Gibbs sampling is used very often in practice since we don’t have to
+design a proposal distribution. Note that the Gibbs sampling algorithm
+described earlier is known as random scan Gibbs sampling because we
+choose an index uniformly at random in each iteration. A common
+implementation of Gibbs sampling is systematic scan Gibbs sampling where
+we have a for loop that goes through all of the variables $$x_{i}$$ in
+some order and samples $$x_{i}^{(t+1)}$$ from the conditional distribution
+of $$x_{i}'$$ given all of the other variables.
 
 # Variants of Gibbs sampling
 

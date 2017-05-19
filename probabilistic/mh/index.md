@@ -59,8 +59,12 @@ is a stationary distribution.
 \$$
 \begin{eqnarray*}
 \sum_{i}\Pi_{i}^{*}P_{ij} & = & \sum_{i}\Pi_{j}^{*}P_{ji}\\
-\sum_{i}\Pi_{i}^{*}P_{ij} & = & \Pi_{j}^{*}\end{aligned}$$$$ Therefore,
-$$\Pi^{*}P=\Pi^{*}$$.
+\sum_{i}\Pi_{i}^{*}P_{ij} & = & \Pi_{j}^{*}
+\end{eqnarray*}
+\$$
+{: style="text-align: center"}
+
+Therefore, $$\Pi^{*}P=\Pi^{*}$$.
 
 Since we want the stationary distribution of the Markov chain to be
 $$p(x)$$, it suffices to design the transition matrix $$P$$ so the Markov
@@ -102,8 +106,13 @@ Then
 \begin{eqnarray*}
 w(i)q(i,j)\frac{w(j)q(j,i)}{w(i)q(i,j)} & = & w(j)q(j,i)\\
 w(i)q(i,j){\alpha}(i,j) & = & w(j)q(j,i){\alpha}(j,i)\\
-p(i)P_{ij} & = & p(j)P_{ji}\end{aligned}$$$$ Therefore, $$p$$ satisfies
-detailed balance and is a stationary distribution.
+p(i)P_{ij} & = & p(j)P_{ji}
+\end{eqnarray*}
+\$$
+{: style="text-align: center"}
+
+Therefore, $$p$$ satisfies detailed balance and is a stationary
+distribution.
 
 Now we just need to ensure that the Markov chain is irreducible and
 aperiodic. This depends on our choice of the proposal distribution $$Q$$
