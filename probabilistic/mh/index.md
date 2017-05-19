@@ -54,7 +54,7 @@ $$\Pi_{i}^{*}P_{ij}=\Pi_{j}^{*}P_{ji}$$.
 **Theorem**: If a distribution $$\Pi^{*}$$ is reversible, then $$\Pi^{*}$$
 is a stationary distribution.
 
-***Proof***: For any state $j$, we have 
+***Proof***: For any state $$j$$, we have 
 
 \$$
 \begin{eqnarray*}
@@ -80,6 +80,7 @@ rejecting proposed moves between states with some probability.
 First, let $$Q$$ be any proposal distribution where $$q(i,j)=Q(j\mid i)$$ is
 the probability of proposing a move to some state $$j$$ given the current
 state $$i$$. Then we will construct the transition matrix $$P$$ as
+
 
 \$$
 \begin{eqnarray*}
