@@ -55,6 +55,7 @@ Let $$x_{i}$$ denote the $$i^{th}$$ variable, and let $$x_{-i}$$ denote the
 set of all variables except $$x_{i}$$. Let
 $$Q(x_{i}',x_{-i}\mid x_{i},x_{-i})=\frac{1}{k}p(x_{i}'\mid x_{-i})$$. Let
 $$A(x_{i}',x_{-i}\mid x_{i},x_{-i})=\min(1,{\alpha})$$ where
+
 \$$
 \begin{eqnarray*}
 {\alpha}& = & \frac{p(x_{i}',x_{-i})Q(x_{i},x_{-i}\mid x_{i}',x_{-i})}{p(x_{i},x_{-i})Q(x_{i}',x_{-i}\mid x_{i},x_{-i})}\\
