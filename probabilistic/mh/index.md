@@ -133,7 +133,7 @@ The procedure for the Metropolis-Hastings algorithm is as follows:
 2.  Draw a sample $$x'$$ from $$Q(x'\mid x^{(t)})$$
 3.  Accept the move with probability
     $$A(x'\mid x^{(t)})=\min(1,{\alpha})$$ where
-    $${\alpha}=\frac{p(x')Q(x^{(t)}\mid x')}{p(x^{(t)})Q(x'\mid x^{(t)})}$$.\
+    $${\alpha}=\frac{p(x')Q(x^{(t)}\mid x')}{p(x^{(t)})Q(x'\mid x^{(t)})}$$.
     If accepted, let $$x^{(t+1)}=x'$$. Otherwise, let $$x^{(t+1)}=x^{(t)}$$.
 4.  Repeat steps 2-3 to draw samples
 
